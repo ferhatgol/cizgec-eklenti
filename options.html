@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÇizGeç - Ayarlar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <img src="icons/icon48.png" style="width: 40px; height: 40px; border-radius: 8px; margin-right: 12px;">
+                <h1>ÇizGeç</h1>
+            </div>
+            <p class="subtitle">Mouse hareketlerinizi güce dönüştürün.</p>
+        </header>
+
+        <section class="settings-card">
+            <h2>Hareket Kaydedici</h2>
+            <div class="recorder-container">
+                <canvas id="recorder-canvas"></canvas>
+                <div class="recorder-info">
+                    <p>Kutu içine <strong>Sağ Tık</strong> ile istediğiniz hareketi çizin.</p>
+                    <div id="gesture-preview-box">
+                        Kod: <span id="current-gesture-code">-</span>
+                    </div>
+                </div>
+            </div>
+            <button id="add-recorded-btn" class="secondary-btn" disabled>Bu Hareketi Listeye Ekle</button>
+        </section>
+
+        <section class="settings-card">
+            <h2>Hareket Eşleştirmeleri</h2>
+            <div id="mapping-list" class="mapping-grid">
+                <!-- Mappings will be injected here -->
+            </div>
+
+            <div class="add-mapping">
+                <button id="add-btn" class="secondary-btn">+ Yeni Hareket Ekle</button>
+                <button id="save-btn" class="primary-btn">Ayarları Kaydet</button>
+            </div>
+        </section>
+
+        <section class="settings-card">
+            <h2>Görsel Ayarlar</h2>
+            <div class="form-group">
+                <label>Çizgi Rengi</label>
+                <input type="color" id="lineColor" value="#3498db">
+            </div>
+            <div class="form-group">
+                <label>Çizgi Kalınlığı (px)</label>
+                <input type="number" id="lineWidth" value="3" min="1" max="10">
+            </div>
+        </section>
+
+        <section class="settings-card">
+            <h2>Sistem</h2>
+            <div class="form-group toggle">
+                <label>Giriş Alanlarında Devre Dışı Bırak</label>
+                <label class="switch">
+                    <input type="checkbox" id="disableOnInput" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="form-group">
+                <label>Kara Liste (URL'ler)</label>
+                <textarea id="blacklist" placeholder="Her satıra bir URL..."></textarea>
+            </div>
+        </section>
+        </main>
+
+        <footer>
+            <p>Geliştirici: <a href="https://ferhatgol.com" target="_blank"
+                    style="color: var(--primary); text-decoration: none; font-weight: 500;">Ferhat Göl</a></p>
+        </footer>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>
