@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="icons/icon128.png" width="128" height="128" alt="ÇizGeç Logo">
+  <img src="https://raw.githubusercontent.com/ferhatgol/cizgec-eklenti/master/icons/icon128.png" width="128" height="128" alt="ÇizGeç Logo">
   <h1>ÇizGeç</h1>
   <p><strong>Modern, Hızlı ve Şık Mouse Gesture Eklentisi</strong></p>
 
